@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Blog Grids | Saturn",
+    "Blog Grids | Desa Pameutingan",
 };
 
 const Blog = () => {

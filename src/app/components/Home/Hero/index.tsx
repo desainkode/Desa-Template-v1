@@ -36,25 +36,26 @@ const Hero: React.FC = () => {
               {...leftAnimation}
               className="relative before:content-[''] before:absolute before:h-full before:w-full before:bg-[url('/images/hero/leftside-backlayer-icons.svg')] before:-left-9.375 before:bg-contain before:bg-no-repeat before:-z-1"
             >
-              <h1 className="text-dark dark:text-white mb-0 md:text-65 sm:text-4xl text-3xl">
-                Build Innovative Apps For Your Business
+              <h1 className="text-dark dark:text-white mb-0 md:text-65 sm:text-4xl text-3xl font-medium">
+                Portal Resmi Desa Pameutingan
               </h1>
-              <p className="text-lg font-medium text-black/50 dark:text-white/50 sm:py-1.875 py-5">
-                Build smarter, move faster, and grow stronger with custom apps designed to support your business every step of the way.
+              <p className="text-lg font-normal text-black/50 dark:text-white/50 sm:py-1.875 py-5 leading-relaxed">
+                Mewujudkan tata kelola desa yang transparan, akuntabel, dan melayani warga dengan sepenuh hati demi kemajuan bersama.
               </p>
-              <Link href="/services" className="sm:px-2.188 px-4 sm:py-1.125 py-2 rounded-lg text-base hover:cursor-pointer font-semibold bg-primary text-white hover:bg-orange-600 duration-500 inline-block sm:mb-0 mb-4">
-                Browse our services
+              <Link href="/profil" className="sm:px-2.188 px-6 sm:py-1.125 py-3 rounded-xl text-base hover:cursor-pointer font-medium bg-primary text-white hover:bg-orange-600 duration-500 inline-block shadow-lg shadow-primary/20 sm:mb-0 mb-4 transition-all active:scale-95">
+                Jelajahi Desa Kami
               </Link>
             </motion.div>
           </div>
           <div className="lg:col-span-6 col-span-12 sm:bg-none bg-[url('/images/hero/right-background.svg')] px-4">
-            <motion.div {...rightAnimation}>
+            <motion.div {...rightAnimation} className="relative">
               <Image
-                src="/images/hero/right-image.png"
-                alt="hero Image"
+                src="/images/hero/hero-desa.png"
+                alt="Kepala Desa Pameutingan"
                 width={700}
                 height={700}
-                className="w-full h-full"
+                className="w-full h-auto drop-shadow-2xl"
+                priority
               />
             </motion.div>
           </div>

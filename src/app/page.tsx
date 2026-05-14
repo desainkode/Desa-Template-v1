@@ -10,7 +10,7 @@ import Info from "@/app/components/Home/Info";
 import Partners from "@/app/components/Home/Partner";
 
 export const metadata: Metadata = {
-  title: "SaasCandy",
+  title: "Desa Pameutingan",
 };
 
 export default function Home() {

@@ -28,118 +28,112 @@ const Footer: FC = () => {
         <div className="grid grid-cols-12 sm:gap-1.875 gap-5">
           <div className="lg:col-span-4 col-span-12">
             <div className="md:pe-7.5">
-              <Link href="#">
+              <Link href="/">
                 <Image
-                  src="/images/logo/logo-white.svg"
-                  alt="Logo"
-                  width={151}
-                  height={32}
+                  src="/images/logo/logo-desa.svg"
+                  alt="Logo Desa Pameutingan"
+                  width={60}
+                  height={60}
                 />
               </Link>
-              <p className="mb-0 font-medium text-lg text-white/50 pt-2.188 pb-1.875">
-                Rakon is a simple, elegant, and secure way to build your bitcoin
-                and crypto portfolio.
+              <p className="mb-0 font-normal text-lg text-white/50 pt-2.188 pb-1.875 leading-relaxed">
+                Portal Informasi Resmi Pemerintah Desa Pameutingan. Mewujudkan pelayanan publik yang prima, transparan, dan akuntabel bagi seluruh warga.
               </p>
-              <p className="text-lg font-medium text-white mb-0">
-                1989 Don Jackson Lane
+              <p className="text-lg font-normal text-white mb-0 italic">
+                Jl. Desa Pameutingan, Kec. Cipatujah
               </p>
-              <p className="text-white/50 text-lg font-medium mb-0">
-                Call us:{" "}
-                <Link href="#" className="text-primary hover:text-orange-600">
-                  808-956-9599
+              <p className="text-lg font-normal text-white mb-0 italic">
+                Kab. Tasikmalaya, Jawa Barat 46189
+              </p>
+              <p className="text-white/50 text-lg font-normal mb-0 pt-4">
+                Hubungi Kami:{" "}
+                <Link href="tel:08123456789" className="text-primary hover:text-orange-600">
+                  +62 812-3456-789
                 </Link>
               </p>
             </div>
           </div>
           <div className="lg:col-span-2 sm:col-span-6 col-span-12">
             <h4 className="text-lg text-white dark:text-white font-medium mb-2.375">
-              Services
+              Layanan
             </h4>
             <ul>
-              {services.map((item, index) => (
-                <li key={index} className="pb-1.563">
-                  <Link
-                    href={`/services/${item.slug}`}
-                    className="text-lg font-medium text-white/50 hover:text-primary"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
+              <li className="pb-1.563">
+                <Link href="/layanan" className="text-lg font-normal text-white/50 hover:text-primary">
+                  Administrasi KTP
+                </Link>
+              </li>
+              <li className="pb-1.563">
+                <Link href="/layanan" className="text-lg font-normal text-white/50 hover:text-primary">
+                  Kartu Keluarga
+                </Link>
+              </li>
+              <li className="pb-1.563">
+                <Link href="/layanan" className="text-lg font-normal text-white/50 hover:text-primary">
+                  Surat Keterangan
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="lg:col-span-2 sm:col-span-6 col-span-12">
             <h4 className="text-lg text-white dark:text-white font-medium mb-2.375">
-              Company
+              Navigasi
             </h4>
             <ul>
               <li className="pb-1.563">
                 <Link
-                  href="/portfolio"
-                  className="text-lg font-medium text-white/50 hover:text-primary"
+                  href="/profil"
+                  className="text-lg font-normal text-white/50 hover:text-primary"
                 >
-                  Portfolio
+                  Profil Desa
                 </Link>
               </li>
               <li className="pb-1.563">
                 <Link
-                  href="/pricing"
-                  className="text-lg font-medium text-white/50 hover:text-primary"
+                  href="/potensi"
+                  className="text-lg font-normal text-white/50 hover:text-primary"
                 >
-                  Pricing
+                  Potensi Desa
                 </Link>
               </li>
               <li className="pb-1.563">
                 <Link
-                  href="/blogs"
-                  className="text-lg font-medium text-white/50 hover:text-primary"
+                  href="/berita"
+                  className="text-lg font-normal text-white/50 hover:text-primary"
                 >
-                  Blogs
+                  Berita Desa
                 </Link>
               </li>
               <li className="pb-1.563">
                 <Link
-                  href="/contact"
-                  className="text-lg font-medium text-white/50 hover:text-primary"
+                  href="/kontak"
+                  className="text-lg font-normal text-white/50 hover:text-primary"
                 >
-                  Contact
+                  Kontak
                 </Link>
               </li>
             </ul>
           </div>
           <div className="lg:col-span-4 md:col-span-7 col-span-12">
             <h4 className="text-lg text-white dark:text-white font-medium sm:mb-2.375 mb-6">
-              Subscribe
+              Akses Cepat
             </h4>
-            <p className="text-lg text-white/50 font-medium mb-4">
-              Subscribe to get the latest news form us
+            <p className="text-lg text-white/50 font-normal mb-4">
+              Dapatkan bantuan layanan mandiri melalui portal warga kami.
             </p>
             <div className="flex sm:flex-nowrap flex-wrap items-center gap-2">
-              <input
-                type="email"
-                name="Email"
-                id="email"
-                placeholder="Enter email address"
-                className="text-base font-medium py-4 px-5 !rounded-lg dark:text-white dark:bg-darkmode h-full border border-border_color focus:border-primary dark:border-border_color dark:focus:border-primary"
-              />
               <Link
-                href="/contact"
-                className="py-4 px-2.188 bg-primary text-white hover:bg-orange-600 rounded-lg duration-500 sm:w-fit w-full"
+                href="/layanan-masyarakat/signin"
+                className="py-4 px-8 bg-primary text-white hover:bg-orange-600 rounded-xl font-medium duration-500 sm:w-fit w-full text-center shadow-lg shadow-primary/20"
               >
-                Register
+                Masuk ke Portal Warga
               </Link>
             </div>
           </div>
         </div>
         <div className="flex md:flex-nowrap flex-wrap gap-6 items-center justify-between sm:pt-17 pt-10">
-          <p className="text-lg font-medium text-white/50 ">
-            @2025 - All Rights Reserved by{" "}
-            <Link
-              href="https://getnextjstemplates.com/"
-              className="hover:text-primary"
-            >
-              GetNextJs Templates
-            </Link>
+          <p className="text-lg font-normal text-white/50 ">
+            &copy; 2026 - Pemerintah Desa Pameutingan. Seluruh Hak Cipta Dilindungi.
           </p>
           <div className="flex gap-6 items-center">
             <Link

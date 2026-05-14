@@ -1,30 +1,26 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTheme } from "next-themes";
 
-interface HeaderProps { }
-const Logo: React.FC<HeaderProps> = () => {
-  const { resolvedTheme } = useTheme();
+const Logo: React.FC = () => {
   return (
-    <Link href="/">
-      <Image
-        src="/images/logo/logo.svg"
-        alt="logo"
-        width={160}
-        height={50}
-        style={{ width: 'auto', height: 'auto' }}
-        quality={100}
-        className='dark:hidden'
-      />
-      <Image
-        src="/images/logo/logo-white.svg"
-        alt="logo"
-        width={160}
-        height={50}
-        style={{ width: 'auto', height: 'auto' }}
-        quality={100}
-        className='dark:block hidden'
-      />
+    <Link href="/" className="flex items-center gap-3">
+      <div className="relative h-10 w-10 flex-shrink-0">
+        <Image
+          src="/images/logo/logo-desa.svg"
+          alt="Logo Desa Pameutingan"
+          fill
+          className="object-contain"
+          quality={100}
+        />
+      </div>
+      <div className="flex flex-col leading-tight">
+        <span className="text-xl font-medium tracking-tight text-black dark:text-white">
+          Pameutingan
+        </span>
+        <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-primary">
+          Tasikmalaya
+        </span>
+      </div>
     </Link>
   );
 };

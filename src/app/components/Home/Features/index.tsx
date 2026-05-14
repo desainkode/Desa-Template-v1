@@ -38,10 +38,10 @@ const Features = () => {
           <div className="lg:col-span-6 col-span-12 px-3">
             <motion.div {...rightAnimation}>
               <p className="dark:text-white/50 text-black/50 text-lg pb-8 mb-0">
-                Why Choose Us
+                Statistik
               </p>
               <h3 className="md:text-6xl sm:text-40 text-3xl font-semibold text-dark dark:text-white pb-8">
-                Top Features That Set Us Apart
+                Demografi & <br /> Statistik Desa
               </h3>
               <ul>
                 <li className="flex gap-2 items-center pb-6">
@@ -54,7 +54,7 @@ const Features = () => {
                     />
                   </span>
                   <p className="text-lg text-black/50 dark:text-white/50">
-                    Effortless User Management and Access Control
+                    3.542 Total Penduduk (Tersebar di 4 Dusun)
                   </p>
                 </li>
                 <li className="flex gap-2 items-center pb-6">
@@ -67,7 +67,7 @@ const Features = () => {
                     />
                   </span>
                   <p className="text-lg dark:text-white/50 text-black/50 ">
-                    Effortless Multi-Platform Deployment for Growth
+                    1.087 Kepala Keluarga (Pembaruan Semester I)
                   </p>
                 </li>
                 <li className="flex gap-2 items-center pb-6">
@@ -80,7 +80,7 @@ const Features = () => {
                     />
                   </span>
                   <p className="text-lg dark:text-white/50 text-black/50 ">
-                    SEO Optimization for Higher Search Rankings
+                    68% Usia Produktif (Rentang 18-55 Tahun)
                   </p>
                 </li>
                 <li className="flex gap-2 items-center">
@@ -93,16 +93,16 @@ const Features = () => {
                     />
                   </span>
                   <p className="text-lg dark:text-white/50 text-black/50 ">
-                    Reliable 24/7 Customer Support for You
+                    Data Kependudukan Akurat dan Terintegrasi
                   </p>
                 </li>
               </ul>
               <div className="mt-8">
                 <Link
-                  href="/services"
+                  href="/infografis"
                   className="py-1.125 px-2.188 bg-primary rounded-lg hover:bg-orange-600 duration-300 text-white font-semibold block w-fit"
                 >
-                  All Services
+                  Lihat Statistik Lengkap
                 </Link>
               </div>
             </motion.div>

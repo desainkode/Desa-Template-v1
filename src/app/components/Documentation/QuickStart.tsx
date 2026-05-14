@@ -60,7 +60,7 @@ export const QuickStart = () => {
         </p>
         <div className="py-4 px-3 rounded-md bg-black">
           <p className="text-sm text-gray-400">
-            {"> SaasCandy_project@1.0.0 dev"}
+            {"> Desa Pameutingan_project@1.0.0 dev"}
           </p>
           <p className="text-sm text-gray-400 mt-1">{"> next dev"}</p>
           <p className="text-sm text-gray-400 mt-6">{"-Next.js 15.1.2"}</p>

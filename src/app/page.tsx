@@ -8,8 +8,6 @@ import APBDes from "@/app/components/Home/APBDes";
 import AparaturDesa from "@/app/components/Home/AparaturDesa";
 import InformasiTerkini from "@/app/components/Home/InformasiTerkini";
 import FAQ from "@/app/components/Home/FAQ";
-import Info from "@/app/components/Home/Info";
-import Partners from "@/app/components/Home/Partner";
 
 export const metadata: Metadata = {
   title: "Desa Pameutingan",
@@ -26,8 +24,6 @@ export default function Home() {
       <AparaturDesa />
       <InformasiTerkini />
       <FAQ />
-      <Info />
-      <Partners />
     </main>
   );
 }

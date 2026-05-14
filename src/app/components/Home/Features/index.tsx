@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import MapComponent from "./MapComponent";
 
 const Features = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref);
 
   const leftAnimation = {

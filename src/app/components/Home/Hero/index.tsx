@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Hero: React.FC = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   const leftAnimation = {
     initial: { x: "-25%", opacity: 0 },

@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import MapComponent from "./MapComponent";
 
 const Features = () => {
   const ref = useRef(null);
@@ -26,13 +26,7 @@ const Features = () => {
         <div className="grid grid-cols-12 xl:gap-24 gap-6 gap-y-11 items-center">
           <div className="lg:col-span-6 col-span-12 px-3">
             <motion.div {...leftAnimation}>
-              <Image
-                src="/images/services/our-service.webp"
-                alt="services"
-                width={550}
-                height={450}
-                className="w-full h-full"
-              />
+              <MapComponent />
             </motion.div>
           </div>
           <div className="lg:col-span-6 col-span-12 px-3">

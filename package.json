@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.8",
-    "@iconify/react": "^5.0.1",
+    "@iconify/react": "^5.2.1",
     "@tailwindcss/postcss": "^4.1.7",
     "axios": "^1.7.2",
     "clsx": "^2.1.1",

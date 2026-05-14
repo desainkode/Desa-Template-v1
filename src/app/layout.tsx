@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={manrope.className}>
+      <body className={manrope.className} suppressHydrationWarning>
         <NextTopLoader color="#EE7B11" />
         <AuthDialogProvider>
           <SessionProviderComp session={session}>

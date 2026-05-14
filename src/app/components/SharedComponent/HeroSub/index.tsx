@@ -14,10 +14,10 @@ const HeroSub: FC<HeroSubProps> = ({ title, description, breadcrumbLinks }) => {
       <div className="container mx-auto lg:max-w-xl md:max-w-screen-md px-4 relative z-10">
         <div className="grid grid-cols-12">
           <div className="lg:col-span-7 col-span-12">
-            <h2 className="dark:text-white md:text-6xl text-4xl font-bold text-black">
+            <h2 className="md:text-6xl text-4xl font-bold text-midnight_text/90 dark:text-white/90">
               {title}
             </h2>
-            <p className="md:text-xl text-lg text-black/50 dark:text-white/50 font-medium my-8">
+            <p className="md:text-xl text-lg text-midnight_text/60 dark:text-white/60 font-medium my-8">
               {description}
             </p>
           </div>

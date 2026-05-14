@@ -8,24 +8,21 @@
 
   --color-primary: #10B981;
   --color-primary-hover: #059669;
-  --color-secondary: #effbff;
+  --color-secondary: #f9f9fb;
   --color-warning: #ee7b11;
   --color-grey: #f9f9fb;
   --color-dark: #141414;
-  --color-Dark-primary: #001c68;
   --color-cream: #fff4ce;
   --color-darkcream: #ffdfaf;
   --color-success: #37a05b;
-  --color-Snowy-sky: #2753c9;
   --color-lightyellow: #ffd44d;
   --color-Smoke: #f1f1f5;
   --color-darkmode: #121212;
   --color-darklight: #1e1e1e;
-  --color-midnight_text: #102d47;
-  --color-Sky-mist-blue: #aec8df;
+  --color-midnight_text: #262626;
   --color-darkborder: #2c2c2c;
-  --color-border_color: #224767;
-  --color-blue: #064e3b;
+  --color-border_color: #333333;
+  --color-emerald-dark: #064e3b;
 
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -97,6 +94,7 @@
   body {
     @apply text-base overflow-x-hidden font-normal dark:bg-darkmode;
     -webkit-text-size-adjust: 100%;
+    transition: background-color 300ms ease, color 300ms ease;
   }
 
   textarea,
@@ -168,11 +166,11 @@ section {
 }
 
 .blog-details p {
-  @apply text-dark/50 dark:text-white/50
+  @apply text-midnight_text/50 dark:text-white/50
 }
 
 .blog-details ul li {
-  @apply text-dark/50 dark:text-white/50
+  @apply text-midnight_text/50 dark:text-white/50
 }
 
 .blog-details ul li a {

@@ -6,16 +6,16 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
   pageDescription,
 }) => {
   return (
-    <div className="dark:bg-midnight_text relative z-10 overflow-hidden pb-[60px] pt-[120px] md:pt-[130px] lg:pt-[160px]">
-      <div className="from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3 absolute bottom-0 left-0 h-px w-full bg-gradient-to-r"></div>
+    <div className="dark:bg-darkmode relative z-10 overflow-hidden pb-[60px] pt-[120px] md:pt-[130px] lg:pt-[160px]">
+      <div className="from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3 absolute bottom-0 left-0 h-px w-full bg-gradient-r"></div>
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4">
             <div className="text-center">
-              <h1 className="text-black mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] md:leading-[1.2]">
+              <h1 className="mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] md:leading-[1.2] text-dark dark:text-white">
                 {pageName}
               </h1>
-              <p className="text-black dark:text-black-6 mb-5 text-base">
+              <p className="mb-5 text-base text-black/60 dark:text-white/60">
                 {pageDescription}
               </p>
 
@@ -23,14 +23,14 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
                 <li>
                   <Link
                     href="/"
-                    className="text-black flex items-center gap-[10px] text-base font-medium dark:text-white"
+                    className="flex items-center gap-[10px] text-base font-medium text-black/60 hover:text-primary dark:text-white/60 dark:hover:text-primary transition-colors"
                   >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <p className="text-body-color flex items-center gap-[10px] text-base font-medium">
-                    <span className="text-body-color dark:text-dark-6"> / </span>
+                  <p className="flex items-center gap-[10px] text-base font-medium text-black/40 dark:text-white/40">
+                    <span> / </span>
                     {pageName}
                   </p>
                 </li>

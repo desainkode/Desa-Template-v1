@@ -69,17 +69,14 @@ const ContactForm = () => {
   };
   return (
     <section className="dark:bg-darkmode pb-24 !pt-0">
-      <div className="container mx-auto lg:max-w-xl md:max-w-screen-md px-4">
-        <div className="grid md:grid-cols-12 grid-cols-1 gap-8">
-          <div className="col-span-6 md:pt-12 pt-0 relative">
-            <h2 className="max-w-72 text-[40px] leading-[3rem] font-bold mb-9">Hubungi Kami</h2>
+      <div className="container mx-auto max-w-7xl px-4">
+        <div className="grid md:grid-cols-12 grid-cols-1 gap-12">
+          <div className="col-span-12 lg:col-span-6 md:pt-12 pt-0 relative">
+            <h2 className="text-[40px] leading-[3rem] font-bold mb-9 text-midnight_text dark:text-white">Hubungi Kami</h2>
             <form onSubmit={handleSubmit} className="flex flex-wrap w-full m-auto justify-between">
-              <div className="sm:flex gap-3 w-full">
+              <div className="sm:flex gap-4 w-full">
                 <div className="mx-0 my-2.5 flex-1">
-                  <label
-                    htmlFor="name"
-                    className="pb-3 inline-block text-base"
-                  >
+                  <label htmlFor="name" className="pb-3 inline-block text-base font-medium text-midnight_text dark:text-white/80">
                     Nama Lengkap*
                   </label>
                   <input
@@ -89,14 +86,11 @@ const ContactForm = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Contoh: Budi Santoso"
-                    className="w-full text-base px-4 rounded-lg py-2.5 border-border border-solid dark:border-darkborder dark:text-white dark:bg-transparent border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
+                    className="w-full text-base px-4 rounded-lg py-2.5 border border-solid border-darkborder/20 dark:border-white/10 dark:text-white dark:bg-darklight/50 transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
                   />
                 </div>
                 <div className="mx-0 my-2.5 flex-1">
-                  <label
-                    htmlFor="projectname"
-                    className="pb-3 inline-block text-base"
-                  >
+                  <label htmlFor="projectname" className="pb-3 inline-block text-base font-medium text-midnight_text dark:text-white/80">
                     Subjek / Kepentingan*
                   </label>
                   <input
@@ -106,16 +100,13 @@ const ContactForm = () => {
                     value={formData.projectname}
                     onChange={handleChange}
                     placeholder="Contoh: Tanya Layanan KTP"
-                    className="w-full text-base px-4 py-2.5 rounded-lg border-border dark:border-darkborder border-solid dark:text-white  dark:bg-transparent border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
+                    className="w-full text-base px-4 py-2.5 rounded-lg border border-solid border-darkborder/20 dark:border-white/10 dark:text-white dark:bg-darklight/50 transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
                   />
                 </div>
               </div>
-              <div className="sm:flex gap-3 w-full">
+              <div className="sm:flex gap-4 w-full">
                 <div className="mx-0 my-2.5 flex-1">
-                  <label
-                    htmlFor="email"
-                    className="pb-3 inline-block text-base"
-                  >
+                  <label htmlFor="email" className="pb-3 inline-block text-base font-medium text-midnight_text dark:text-white/80">
                     Alamat Email*
                   </label>
                   <input
@@ -125,40 +116,29 @@ const ContactForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Contoh: budi@email.com"
-                    className="w-full text-base px-4 py-2.5 rounded-lg border-border dark:border-darkborder border-solid dark:text-white  dark:bg-transparent border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
+                    className="w-full text-base px-4 py-2.5 rounded-lg border border-solid border-darkborder/20 dark:border-white/10 dark:text-white dark:bg-darklight/50 transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
                   />
                 </div>
                 <div className="mx-0 my-2.5 flex-1">
-                  <label
-                    htmlFor="Project"
-                    className="pb-3 inline-block text-base"
-                  >
+                  <label htmlFor="Project" className="pb-3 inline-block text-base font-medium text-midnight_text dark:text-white/80">
                     Kategori Layanan*
                   </label>
                   <select name="Project"
                     id="Project"
                     value={formData.Project}
-                    onChange={handleChange} className="w-full text-base px-4 py-2.5 rounded-lg border-border dark:text-white border-solid dark:bg-transparent border transition-all duration-500 focus:border-primary dark:focus:border-primary dark:border-darkborder focus:outline-0">
-                    <option value="">Pilih Kategori</option>
-                    <option value="Layanan Kependudukan">
-                      Layanan Kependudukan
-                    </option>
-                    <option value="Aspirasi & Keluhan">Aspirasi & Keluhan</option>
-                    <option value="Informasi Desa">Informasi Desa</option>
-                    <option value="Bantuan Sosial">
-                      Bantuan Sosial
-                    </option>
-                    <option value="Pertanyaan Umum">
-                      Pertanyaan Umum
-                    </option>
+                    onChange={handleChange} 
+                    className="w-full text-base px-4 py-2.5 rounded-lg border border-solid border-darkborder/20 dark:border-white/10 dark:text-white dark:bg-darklight transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0 appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20stroke%3D%22%236b7280%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22m6%208%204%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.25rem_1.25rem] bg-[right_0.5rem_center] bg-no-repeat">
+                    <option value="" className="bg-white dark:bg-darklight">Pilih Kategori</option>
+                    <option value="Layanan Kependudukan" className="bg-white dark:bg-darklight">Layanan Kependudukan</option>
+                    <option value="Aspirasi & Keluhan" className="bg-white dark:bg-darklight">Aspirasi & Keluhan</option>
+                    <option value="Informasi Desa" className="bg-white dark:bg-darklight">Informasi Desa</option>
+                    <option value="Bantuan Sosial" className="bg-white dark:bg-darklight">Bantuan Sosial</option>
+                    <option value="Pertanyaan Umum" className="bg-white dark:bg-darklight">Pertanyaan Umum</option>
                   </select>
                 </div>
               </div>
               <div className="w-full">
-                <label
-                  htmlFor="password"
-                  className="text-base inline-block pb-4"
-                >
+                <label htmlFor="Message" className="text-base font-medium inline-block pb-4 text-midnight_text dark:text-white/80">
                   Pesan / Aspirasi
                 </label>
                 <textarea
@@ -166,8 +146,9 @@ const ContactForm = () => {
                   name='Message'
                   value={formData.Message}
                   onChange={handleChange}
-                  className='border border-border px-4 py-2 focus:outline-hidden bg-white dark:bg-darkmode dark:border-border_color rounded-lg dark:focus:border-primary focus:border-primary'
-                  placeholder='Tuliskan aspirasi atau pertanyaan Anda di sini...'>
+                  className='w-full border border-solid border-darkborder/20 dark:border-white/10 px-4 py-2 focus:outline-0 bg-white dark:bg-darklight/50 dark:text-white rounded-lg dark:focus:border-primary focus:border-primary transition-all duration-500'
+                  placeholder='Tuliskan aspirasi atau pertanyaan Anda di sini...'
+                  rows={4}>
                 </textarea>
               </div>
               <div className="mx-0 my-2.5 w-full">

@@ -22,16 +22,16 @@ const SingleQuestion = ({ question, answer }: Questiontypes) => {
                             </div>
                             
                             {/* Collapse Label (Visible when open) */}
-                            <figure className={`shrink-0 items-center gap-x-3 whitespace-nowrap rounded-full bg-slate-200 dark:bg-slate-800 py-1.5 pl-3 pr-1.5 text-sm text-slate-600 dark:text-slate-400 transition-all ${open ? 'flex' : 'hidden'}`}>
+                            <figure className={`shrink-0 items-center gap-x-3 whitespace-nowrap rounded-full bg-primary/10 dark:bg-primary/20 py-1.5 pl-3 pr-1.5 text-sm text-primary transition-all ${open ? 'flex' : 'hidden'}`}>
                                 Tutup
-                                <svg className="h-5 text-slate-600 dark:text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <svg className="h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path fillRule="evenodd" d="M4.25 12a.75.75 0 0 1 .75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
                                 </svg>
                             </figure>
 
                             {/* Plus Icon (Visible when closed) */}
-                            <figure className={`shrink-0 items-center justify-center transition-all rounded-full bg-slate-200 dark:bg-slate-800 p-1.5 shadow-[0_2px_10px_0px_rgba(0,0,0,0.05)] ${open ? 'hidden' : 'flex'}`}>
-                                <svg className="h-5 text-slate-600 dark:text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <figure className={`shrink-0 items-center justify-center transition-all rounded-full bg-primary/10 dark:bg-primary/20 p-1.5 shadow-[0_2px_10px_0px_rgba(16,185,129,0.1)] ${open ? 'hidden' : 'flex'}`}>
+                                <svg className="h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path fillRule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clipRule="evenodd" />
                                 </svg>
                             </figure>

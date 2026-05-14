@@ -5,6 +5,7 @@ import Services from "@/app/components/Home/Services";
 import Features from "@/app/components/Home/Features";
 import PotensiDesa from "@/app/components/Home/PotensiDesa";
 import APBDes from "@/app/components/Home/APBDes";
+import AparaturDesa from "@/app/components/Home/AparaturDesa";
 import InformasiTerkini from "@/app/components/Home/InformasiTerkini";
 import FAQ from "@/app/components/Home/FAQ";
 import Info from "@/app/components/Home/Info";
@@ -22,6 +23,7 @@ export default function Home() {
       <Features />
       <PotensiDesa />
       <APBDes />
+      <AparaturDesa />
       <InformasiTerkini />
       <FAQ />
       <Info />

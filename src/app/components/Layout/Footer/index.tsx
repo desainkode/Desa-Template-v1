@@ -39,12 +39,12 @@ const Footer: FC = () => {
               <p className="mb-0 font-normal text-lg text-white/50 pt-2.188 pb-1.875 leading-relaxed">
                 Portal Informasi Resmi Pemerintah Desa Pameutingan. Mewujudkan pelayanan publik yang prima, transparan, dan akuntabel bagi seluruh warga.
               </p>
-              <p className="text-lg font-normal text-white mb-0 italic">
+              {/* <p className="text-lg font-normal text-white mb-0 italic">
                 Jl. Desa Pameutingan, Kec. Cipatujah
               </p>
               <p className="text-lg font-normal text-white mb-0 italic">
                 Kab. Tasikmalaya, Jawa Barat 46189
-              </p>
+              </p> */}
               <p className="text-white/50 text-lg font-normal mb-0 pt-4">
                 Hubungi Kami:{" "}
                 <Link href="tel:08123456789" className="text-primary hover:text-primary-hover">

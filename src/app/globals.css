@@ -19,13 +19,13 @@
   --color-Snowy-sky: #2753c9;
   --color-lightyellow: #ffd44d;
   --color-Smoke: #f1f1f5;
-  --color-darkmode: #081738;
-  --color-darklight: #000f30;
+  --color-darkmode: #121212;
+  --color-darklight: #1e1e1e;
   --color-midnight_text: #102d47;
   --color-Sky-mist-blue: #aec8df;
-  --color-darkborder: #192a4a;
+  --color-darkborder: #2c2c2c;
   --color-border_color: #224767;
-  --color-blue: #1642b9;
+  --color-blue: #064e3b;
 
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -95,7 +95,7 @@
 
 @layer components {
   body {
-    @apply text-base overflow-x-hidden font-normal;
+    @apply text-base overflow-x-hidden font-normal dark:bg-darkmode;
     -webkit-text-size-adjust: 100%;
   }
 

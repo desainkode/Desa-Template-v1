@@ -6,21 +6,21 @@ import { motion, useInView } from "framer-motion";
 import MapComponent from "./MapComponent";
 
 const Features = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref);
-
   const leftAnimation = {
-    animate: inView ? { x: 0, opacity: 1 } : { x: "-10%", opacity: 0 },
-    transition: { duration: 1, delay: 0.8 },
+    initial: { x: -40, opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
+    viewport: { once: true },
+    transition: { duration: 0.5, ease: "easeOut" },
   };
   const rightAnimation = {
-    animate: inView ? { x: 0, opacity: 1 } : { x: "10%", opacity: 0 },
-    transition: { duration: 1, delay: 0.8 },
+    initial: { x: 40, opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
+    viewport: { once: true },
+    transition: { duration: 0.5, ease: "easeOut", delay: 0.2 },
   };
   return (
     <section className="bg-grey dark:bg-darklight overflow-x-hidden">
       <div
-        ref={ref}
         className="container mx-auto lg:max-w-xl md:max-w-screen-md px-4"
       >
         <div className="grid grid-cols-12 xl:gap-24 gap-6 gap-y-11 items-center">
@@ -44,7 +44,7 @@ const Features = () => {
                       icon="tabler:circle-check"
                       width="25"
                       height="25"
-                      className="font-semibold text-success"
+                      className="font-semibold text-primary"
                     />
                   </span>
                   <p className="text-lg text-black/50 dark:text-white/50">
@@ -57,7 +57,7 @@ const Features = () => {
                       icon="tabler:circle-check"
                       width="25"
                       height="25"
-                      className="font-semibold text-success"
+                      className="font-semibold text-primary"
                     />
                   </span>
                   <p className="text-lg dark:text-white/50 text-black/50 ">
@@ -70,7 +70,7 @@ const Features = () => {
                       icon="tabler:circle-check"
                       width="25"
                       height="25"
-                      className="font-semibold text-success"
+                      className="font-semibold text-primary"
                     />
                   </span>
                   <p className="text-lg dark:text-white/50 text-black/50 ">
@@ -83,7 +83,7 @@ const Features = () => {
                       icon="tabler:circle-check"
                       width="25"
                       height="25"
-                      className="font-semibold text-success"
+                      className="font-semibold text-primary"
                     />
                   </span>
                   <p className="text-lg dark:text-white/50 text-black/50 ">
@@ -94,7 +94,7 @@ const Features = () => {
               <div className="mt-8">
                 <Link
                   href="/infografis"
-                  className="py-1.125 px-2.188 bg-primary rounded-lg hover:bg-primary-hover duration-300 text-white font-semibold block w-fit"
+                  className="py-1.125 px-2.188 bg-primary rounded-xl hover:bg-primary-hover duration-300 text-white font-semibold block w-fit"
                 >
                   Lihat Statistik Lengkap
                 </Link>

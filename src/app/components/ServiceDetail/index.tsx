@@ -4,8 +4,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import HeroSub from "@/app/components/SharedComponent/HeroSub";
-import UsedTech from "@/app/components/Services/Technologies";
-import ServiceDetailSkeleton from "../Skeleton/ServiceDetail/page";
+import ServiceDetailSkeleton from "../Skeleton/ServiceDetail";
 
 const ServiceDetail = () => {
     const [services, setServices] = useState<any[]>([])
@@ -99,7 +98,6 @@ const ServiceDetail = () => {
                     </ul>
                 </div>
             </section>
-            <UsedTech />
         </>
     );
 };

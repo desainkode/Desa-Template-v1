@@ -8,11 +8,9 @@ type Doctype = {
 
 const PotensiCard = ({ icon, title, text }: Doctype) => {
     return (
-        <div
-            className="lg:col-span-4 sm:col-span-6 col-span-12"
-        >
-            <div className="border border-Snowy-sky md:px-15 md:py-3.438 p-8 rounded-2xl text-center lg:mb-0">
-                <div className="rounded-full flex justify-center w-20 h-20 items-center mx-auto bg-Snowy-sky">
+        <div className="h-full" >
+            <div className="border border-white/10 backdrop-blur-sm bg-white/5 md:px-15 md:py-3.438 p-8 rounded-2xl text-center lg:mb-0 transition-all">
+                <div className="rounded-full flex justify-center w-20 h-20 items-center mx-auto bg-primary shadow-lg shadow-primary/20">
                     <span className="relative z-1">
                         <Icon
                             icon={icon}

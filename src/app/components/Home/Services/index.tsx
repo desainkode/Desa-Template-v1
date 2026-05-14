@@ -2,10 +2,10 @@
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import SingleService from "./SingleService";
+import SingleService, { ServiceType } from "./SingleService";
 
 const Services = () => {
-  const [services, setServices] = useState<any[]>([])
+  const [services, setServices] = useState<ServiceType[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,20 +22,42 @@ const Services = () => {
 
     fetchData()
   }, [])
-  const ref = useRef(null);
-  const inView = useInView(ref);
-
-  const TopAnimation = {
-    animate: inView ? { y: 0, opacity: 1 } : { y: "-100%", opacity: 0 },
-    transition: { duration: 1, delay: 0.4 },
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
   };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  console.log("Services data:", services);
+
   return (
-    <section className="dark:bg-darkmode bg-[url('/images/plan/price-plan-background-icons.svg')] bg-cover bg-center bg-no-repeat overflow-hidden">
+    <section className="dark:bg-darkmode bg-[url('/images/plan/price-plan-background-icons.svg')] bg-cover bg-center bg-no-repeat overflow-hidden min-h-[400px]">
       <div
-        ref={ref}
         className="container mx-auto lg:max-w-xl md:max-w-screen-md px-4"
       >
-        <motion.div {...TopAnimation} className="mb-17">
+        <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-17"
+        >
           <p className="text-black/50 dark:text-white/50 text-lg lg:text-start text-center">
             Layanan Desa
           </p>
@@ -51,11 +73,18 @@ const Services = () => {
             </Link>
           </div>
         </motion.div>
-        <div className="grid grid-cols-12 gap-6">
+        <motion.div 
+            initial="hidden"
+            animate={services.length > 0 ? "visible" : "hidden"}
+            variants={containerVariants}
+            className="grid grid-cols-12 gap-6"
+        >
           {services.slice(0, 3).map((item, index) => (
-            <SingleService key={index} service={item} />
+            <motion.div key={index} variants={itemVariants} className="xl:col-span-4 md:col-span-6 col-span-12">
+                <SingleService service={item} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

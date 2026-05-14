@@ -1,4 +1,3 @@
-import UsedTech from "../../Services/Technologies"
 import Breadcrumb from "../../Breadcrumb"
 
 const breadcrumbLinks = [
@@ -60,7 +59,6 @@ const ServiceDetailSkeleton = () => {
                     </ul>
                 </div>
             </section>
-            <UsedTech />
         </>
     )
 }

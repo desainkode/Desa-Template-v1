@@ -1,23 +1,24 @@
 import HeroSub from "@/app/components/SharedComponent/HeroSub";
-import Plan from "@/app/components/Home/Plans";
+import APBDes from "@/app/components/Home/APBDes";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Pricing | SassCandy",
+  title: "Transparansi Anggaran | Desa Pameutingan",
 };
 
 const page = () => {
   const breadcrumbLinks = [
-    { href: "/", text: "Home" },
-    { href: "/pricing", text: "Pricing" },
+    { href: "/", text: "Beranda" },
+    { href: "/pricing", text: "Anggaran" },
   ];
   return (
     <>
       <HeroSub
-        title="Pricing"
-        description="Choose the perfect plan that fits your needs. Whether you're just getting started or scaling up, we’ve got you covered."
+        title="Transparansi Anggaran"
+        description="Laporan Pendapatan dan Belanja Desa (APBDes) Pameutingan sebagai bentuk keterbukaan informasi publik."
         breadcrumbLinks={breadcrumbLinks}
       />
-      <Plan />
+      <APBDes />
     </>
   );
 };

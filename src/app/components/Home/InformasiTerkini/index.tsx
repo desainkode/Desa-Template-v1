@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from 'react';
 import Slider from "react-slick";
+import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -81,9 +82,9 @@ const InformasiTerkini = () => {
                         Kabar Terbaru
                         <br /> Desa Pameutingan
                     </h3>
-                    <p className="mt-4 text-lg text-black/50 dark:text-white/50 sm:w-1/2 lg:w-2/5">
+                    {/* <p className="mt-4 text-lg text-black/50 dark:text-white/50 sm:w-1/2 lg:w-2/5">
                         Ikuti perkembangan terbaru mengenai pembangunan dan kegiatan desa kami.
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className="mt-4 border-b border-b-neutral-100 dark:border-b-white/10 lg:mt-10"></div>
@@ -94,12 +95,13 @@ const InformasiTerkini = () => {
                             <div key={index} className="px-3">
                                 <article className="flex flex-col group">
                                     <figure
-                                        className="w-full rounded-2xl lg:rounded-3xl shadow-card-shadow overflow-hidden"
+                                        className="w-full relative h-40 lg:h-64 rounded-2xl lg:rounded-3xl shadow-card-shadow overflow-hidden"
                                     >
-                                        <img
-                                            className="h-40 w-full rounded-2xl object-cover lg:h-64 lg:rounded-3xl duration-500"
+                                        <Image
+                                            className="size-full object-cover duration-500 group-hover:scale-110"
                                             src={item.image}
                                             alt={item.title}
+                                            fill
                                         />
                                     </figure>
                                     <div className="flex flex-col items-start p-3 lg:p-4">
@@ -124,7 +126,7 @@ const InformasiTerkini = () => {
                     <button
                         type="button"
                         onClick={() => sliderRef.current?.slickNext()}
-                        aria-label="Next Slide"
+                        aria-label="Slide Berikutnya"
                         className="rounded-full cursor-pointer flex items-center justify-center bg-slate-900 text-white hover:bg-slate-800 shadow-xl w-10 h-10 md:w-12 md:h-12 absolute -right-2 md:-right-6 top-1/2 z-10 -translate-y-1/2 transition-all duration-300 hover:scale-110"
                     >
                         <svg

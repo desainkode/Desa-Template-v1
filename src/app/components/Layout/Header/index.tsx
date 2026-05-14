@@ -129,7 +129,9 @@ const Header: React.FC = () => {
             className="hidden xl:flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary-hover border border-primary transition-all duration-300 shadow-lg shadow-primary/20 text-sm font-medium active:scale-95"
           >
             Layanan
-            <Icon icon="solar:arrow-right-up-bold" width="18" height="18" />
+            <span className="flex items-center justify-center w-[18px] h-[18px]">
+                <Icon icon="solar:arrow-right-up-bold" width="18" height="18" />
+            </span>
           </Link>
 
           {/* Mobile Menu Toggle */}

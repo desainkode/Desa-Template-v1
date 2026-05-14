@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import SingleService from "../../Home/Services/SingleService";
-import SkeletonCard from "../../Skeleton/ServiceCard/page";
+import SkeletonCard from "../../Skeleton/ServiceCard";
 
 const ServicesCard = () => {
   const [services, setServices] = useState<any[]>([]);

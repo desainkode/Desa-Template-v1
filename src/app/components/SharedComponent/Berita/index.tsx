@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-import BeritaCard from "./beritaCard";
+import BeritaCard from "./BeritaCard";
 import { getAllPosts } from "@/utils/markdown";
 
 const Berita: React.FC = () => {

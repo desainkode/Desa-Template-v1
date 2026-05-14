@@ -2,8 +2,10 @@
 
 import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
-import { AnimatedBeam } from "@/app/components/ui/animated-beam";
+import { AnimatedBeam } from "@/app/components/ui/AnimatedBeam";
 import { Icon } from "@iconify/react";
+
+import Image from "next/image";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -14,7 +16,7 @@ const Circle = forwardRef<
       ref={ref}
       title={title}
       className={cn(
-        "z-10 flex size-20 items-center justify-center rounded-full border-2 border-slate-200 bg-white p-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:border-slate-800 dark:bg-darklight",
+        "z-10 flex size-24 items-center justify-center rounded-full border-2 border-slate-200 bg-white p-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:border-slate-800 dark:bg-darklight",
         className,
       )}
     >
@@ -31,36 +33,36 @@ const StaffMember = forwardRef<
 >(({ name, role, image, className, isKades }, ref) => {
   return (
     <div className="flex flex-col items-center gap-3">
-      <Circle ref={ref} className={cn("overflow-hidden p-0", isKades && "size-32 border-primary border-4 shadow-primary/20", className)} title={role}>
+      <Circle ref={ref} className={cn("overflow-hidden p-0", isKades && "size-40 border-primary border-4 shadow-primary/20", className)} title={role}>
         <div className="relative size-full">
-          <img src={image} alt={name} className="size-full object-cover" />
+          <Image src={image} alt={name} fill className="size-full object-cover" />
           {isKades && (
-            <div className="absolute bottom-0 left-0 right-0 bg-primary/80 py-1 text-center">
-              <span className="text-xs font-bold text-white uppercase tracking-wider">KADES</span>
+            <div className="absolute bottom-0 left-0 right-0 bg-primary/80 py-1.5 text-center">
+              <span className="text-[10px] font-bold text-white uppercase tracking-widest">KADES</span>
             </div>
           )}
         </div>
       </Circle>
 
-      <div className="flex flex-col items-center min-w-[100px] group">
+      <div className="flex flex-col items-center min-w-[120px] group">
         {/* Top part: Name */}
         <div className={cn(
-          "px-3 py-1.5 text-center w-full rounded-t-[5px] transition-colors duration-300",
-          isKades ? "bg-primary text-white" : "bg-slate-200 dark:bg-slate-800 text-dark dark:text-white"
+          "px-3 py-2 text-center w-full rounded-t-xl transition-colors duration-300",
+          isKades ? "bg-primary text-white" : "bg-slate-100 dark:bg-slate-800 text-dark dark:text-white"
         )}>
-          <div className={cn("text-xs font-bold leading-tight truncate px-1")}>
+          <div className={cn("text-[13px] font-bold leading-tight truncate px-1")}>
             {name}
           </div>
         </div>
 
         {/* Bottom part: Role */}
         <div className={cn(
-          "px-3 py-1 text-center w-full rounded-b-[5px] border-x border-b transition-colors duration-300",
+          "px-3 py-1.5 text-center w-full rounded-b-xl border-x border-b transition-colors duration-300",
           isKades
             ? "bg-white dark:bg-darklight border-primary text-primary"
             : "bg-white dark:bg-darklight border-slate-200 dark:border-slate-800 text-black/60 dark:text-white/60"
         )}>
-          <div className="text-[10px] font-semibold leading-tight uppercase tracking-tighter truncate">
+          <div className="text-[11px] font-semibold leading-tight uppercase tracking-tighter truncate">
             {role}
           </div>
         </div>
@@ -90,7 +92,13 @@ const StaffData = [
   { name: "Indah Permata", role: "Staf Pelayanan", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" },
 ];
 
-const SampleNextArrow = (props: any) => {
+interface ArrowProps {
+    className?: string;
+    style?: React.CSSProperties;
+    onClick?: () => void;
+}
+
+const SampleNextArrow = (props: ArrowProps) => {
     const { className, style, onClick } = props;
     return (
         <div
@@ -103,7 +111,7 @@ const SampleNextArrow = (props: any) => {
     );
 }
 
-const SamplePrevArrow = (props: any) => {
+const SamplePrevArrow = (props: ArrowProps) => {
     const { className, style, onClick } = props;
     return (
         <div
@@ -160,7 +168,7 @@ const AparaturDesa = () => {
 
   return (
     <section className="pt-12 lg:pt-16 pb-12 lg:pb-16 bg-white dark:bg-darkmode overflow-hidden">
-      <div className="container mx-auto lg:max-w-xl md:max-w-screen-md px-4">
+      <div className="container mx-auto lg:max-w-7xl md:max-w-screen-md px-4">
         <div className="text-start mb-12">
           <p className="text-lg text-black/50 dark:text-white/50 mb-6">
             Struktur Organisasi
@@ -198,7 +206,7 @@ const AparaturDesa = () => {
           className="relative hidden md:flex w-full items-center justify-center overflow-hidden p-10 md:p-20"
           ref={containerRef}
         >
-          <div className="flex size-full flex-row items-stretch justify-between gap-6 md:gap-12 max-w-4xl">
+          <div className="flex size-full flex-row items-stretch justify-between gap-8 md:gap-16 max-w-5xl">
             {/* Column 1 - Left Outer */}
             <div className="flex flex-col justify-between gap-8">
               <StaffMember ref={div8Ref} name="Asep Sunandar" role="Staf Keuangan" image="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=200&auto=format&fit=crop" />

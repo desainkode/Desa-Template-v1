@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import SocialSignUp from '../SocialBTN/socialSignUp'
+import SocialSignUp from '../SocialBTN/SocialSignUp'
 import Logo from '@/app/components/Layout/Header/Logo'
 import { useState } from 'react'
 import Loader from '@/app/components/Common/Loader'

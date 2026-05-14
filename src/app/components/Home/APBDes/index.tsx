@@ -5,6 +5,8 @@ import { Icon } from "@iconify/react";
 import Logo from "@/app/components/Layout/Header/Logo";
 import APBDesCard, { APBDesItem } from "./APBDesCard";
 
+import { motion } from "framer-motion";
+
 const APBDes = () => {
   const [enabled, setEnabled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,18 +43,43 @@ const APBDes = () => {
     setSelectedData(null);
   };
 
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section className="relative bg-contain bg-no-repeat bg-[url('/images/plan/price-plan-background-icons.svg')] bg-center dark:bg-darkmode">
       <div className="container mx-auto lg:max-w-xl md:max-w-screen-md px-4">
         <div className="text-start">
-          <p className="text-lg text-black/50 dark:text-white/50 mb-6">
-            Transparansi Anggaran
-          </p>
-          <h3 className="md:text-6xl sm:text-4xl text-3xl font-semibold text-dark dark:text-white">
-            Laporan Pendapatan
-            <br /> & Belanja Desa
-          </h3>
-          <div className="mt-8 mb-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={itemVariants}
+          >
+            <p className="text-lg text-black/50 dark:text-white/50 mb-6">
+                Transparansi Anggaran
+            </p>
+            <h3 className="md:text-6xl sm:text-4xl text-3xl font-semibold text-dark dark:text-white">
+                Laporan Pendapatan
+                <br /> & Belanja Desa
+            </h3>
+          </motion.div>
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={itemVariants}
+            className="mt-8 mb-8"
+          >
             <div className="flex justify-center items-center gap-4">
               <label
                 htmlFor="switch"
@@ -75,12 +102,28 @@ const APBDes = () => {
                 2025
               </label>
             </div>
-          </div>
-          <div className="grid grid-cols-12 mt-10 sm:gap-1.875 gap-y-1.875">
+          </motion.div>
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                    opacity: 1,
+                    transition: {
+                        staggerChildren: 0.1,
+                    },
+                },
+            }}
+            className="grid grid-cols-12 mt-10 sm:gap-1.875 gap-y-1.875"
+          >
             {currentData.map((item, index) => (
-              <APBDesCard key={index} data={item} onViewDetail={openModal} />
+              <motion.div key={index} variants={itemVariants} className="xl:col-span-4 md:col-span-6 col-span-12">
+                <APBDesCard data={item} onViewDetail={openModal} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
       {isModalOpen && selectedData && (
@@ -111,7 +154,13 @@ const APBDes = () => {
                 </div>
                 <div className="flex justify-between items-center mb-4 pb-4 border-b border-black/5 dark:border-white/5">
                     <span className="text-black/60 dark:text-white/60">Nilai Anggaran:</span>
-                    <span className="font-bold text-primary text-xl">Rp {selectedData.price}</span>
+                    <span className="font-bold text-primary text-xl">
+                        Rp {typeof selectedData.price === 'number' 
+                            ? selectedData.price.toLocaleString('id-ID') 
+                            : !isNaN(Number(selectedData.price)) 
+                                ? Number(selectedData.price).toLocaleString('id-ID') 
+                                : selectedData.price}
+                    </span>
                 </div>
                 <div className="mt-4">
                     <p className="text-sm font-semibold text-black/60 dark:text-white/60 mb-2">Deskripsi:</p>
@@ -124,7 +173,7 @@ const APBDes = () => {
                 <ul className="grid grid-cols-1 gap-3">
                     {selectedData.benefits.map((benefit, i) => (
                         <li key={i} className="flex items-center gap-3 text-dark dark:text-white">
-                            <Icon icon="tabler:circle-check" className="text-success" width="20" />
+                            <Icon icon="tabler:circle-check" className="text-primary" width="20" />
                             {benefit}
                         </li>
                     ))}

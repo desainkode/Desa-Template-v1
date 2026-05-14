@@ -1,9 +1,9 @@
-import { Blog } from "@/app/types/blog";
+import { Berita } from "@/app/types/berita";
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
-const BlogList = ({ blog }: { blog: Blog }) => {
+const BeritaList = ({ blog }: { blog: Berita }) => {
   const { title, coverImage, excerpt, date, slug } = blog;
 
   return (
@@ -11,14 +11,14 @@ const BlogList = ({ blog }: { blog: Blog }) => {
       className="group mb-10 relative"
     >
       <div className="mb-8 overflow-hidden rounded">
-        <Link href={`/blogs/${slug}`} aria-label="blog cover" className="block h-72">
+        <Link href={`/berita/${slug}`} aria-label="blog cover" className="block h-72">
           <Image
             src={coverImage!}
             alt="image"
-            className="w-full transition group-hover:scale-125 h-full"
+            className="w-full transition group-hover:scale-125 h-full object-cover"
             width={408}
             height={272}
-            layout="responsive"
+            style={{ width: '100%', height: 'auto' }}
             quality={100}
           />
         </Link>
@@ -26,7 +26,7 @@ const BlogList = ({ blog }: { blog: Blog }) => {
       <div>
         <h3>
           <Link
-            href={`/blogs/${slug}`}
+            href={`/berita/${slug}`}
             className="mb-4 inline-block font-semibold text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary text-xl"
           >
             {title}
@@ -39,4 +39,4 @@ const BlogList = ({ blog }: { blog: Blog }) => {
     </div>
   );
 };
-export default BlogList;
+export default BeritaList;

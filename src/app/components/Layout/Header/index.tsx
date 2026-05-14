@@ -126,7 +126,7 @@ const Header: React.FC = () => {
 
           <Link
             href={session?.user || user?.user ? "/layanan" : "/layanan-masyarakat/signin"}
-            className="hidden xl:flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl hover:bg-orange-600 border border-primary transition-all duration-300 shadow-lg shadow-primary/20 text-sm font-medium active:scale-95"
+            className="hidden xl:flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary-hover border border-primary transition-all duration-300 shadow-lg shadow-primary/20 text-sm font-medium active:scale-95"
           >
             Layanan
             <Icon icon="solar:arrow-right-up-bold" width="18" height="18" />
@@ -185,7 +185,7 @@ const Header: React.FC = () => {
           <div className="mt-6 w-full px-2">
             <Link
               href={session?.user || user?.user ? "/layanan" : "/layanan-masyarakat/signin"}
-              className="flex h-12 w-full items-center justify-center bg-primary text-white rounded-xl font-medium shadow-lg shadow-primary/20 hover:bg-orange-600 transition-all active:scale-95"
+              className="flex h-12 w-full items-center justify-center bg-primary text-white rounded-xl font-medium shadow-lg shadow-primary/20 hover:bg-primary-hover transition-all active:scale-95"
               onClick={() => {
                 setNavbarOpen(false);
               }}

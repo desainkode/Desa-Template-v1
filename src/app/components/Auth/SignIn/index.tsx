@@ -99,7 +99,7 @@ const Signin = () => {
           <button
             type='submit'
             disabled={loading}
-            className='flex w-full cursor-pointer items-center justify-center rounded-xl border border-primary bg-primary hover:bg-orange-600 px-5 py-3.5 text-base text-white font-medium transition duration-300 shadow-lg shadow-primary/20 disabled:opacity-70'>
+            className='flex w-full cursor-pointer items-center justify-center rounded-xl border border-primary bg-primary hover:bg-primary-hover px-5 py-3.5 text-base text-white font-medium transition duration-300 shadow-lg shadow-primary/20 disabled:opacity-70'>
             {loading ? "Memproses..." : "Masuk ke Sistem"}
             {loading && <Loader />}
           </button>

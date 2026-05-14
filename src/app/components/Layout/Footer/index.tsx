@@ -47,7 +47,7 @@ const Footer: FC = () => {
               </p>
               <p className="text-white/50 text-lg font-normal mb-0 pt-4">
                 Hubungi Kami:{" "}
-                <Link href="tel:08123456789" className="text-primary hover:text-orange-600">
+                <Link href="tel:08123456789" className="text-primary hover:text-primary-hover">
                   +62 812-3456-789
                 </Link>
               </p>
@@ -124,7 +124,7 @@ const Footer: FC = () => {
             <div className="flex sm:flex-nowrap flex-wrap items-center gap-2">
               <Link
                 href="/layanan-masyarakat/signin"
-                className="py-4 px-8 bg-primary text-white hover:bg-orange-600 rounded-xl font-medium duration-500 sm:w-fit w-full text-center shadow-lg shadow-primary/20"
+                className="py-4 px-8 bg-primary text-white hover:bg-primary-hover rounded-xl font-medium duration-500 sm:w-fit w-full text-center shadow-lg shadow-primary/20"
               >
                 Masuk ke Portal Warga
               </Link>

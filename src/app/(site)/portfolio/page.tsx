@@ -1,5 +1,5 @@
 import HeroSub from "@/app/components/SharedComponent/HeroSub";
-import ProductDoc from "@/app/components/Home/ProductDoc";
+import PotensiDesa from "@/app/components/Home/PotensiDesa";
 import Features from "@/app/components/Home/Features";
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ const page = () => {
         breadcrumbLinks={breadcrumbLinks}
       />
       <Features />
-      <ProductDoc />
+      <PotensiDesa />
     </>
   );
 };

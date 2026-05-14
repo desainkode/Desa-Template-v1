@@ -97,7 +97,7 @@ const Info = () => {
   };
 
   return (
-    <section className="bg-blue relative bg-no-repeat bg-[url('/images/info/contact-background-layer.svg')] bg-cover">
+    <section className="bg-blue relative bg-no-repeat bg-[url('/images/info/kontak-background-layer.svg')] bg-cover">
       <div className="container mx-auto lg:max-w-xl md:max-w-screen-md relative z-1 px-4">
         <div className="grid grid-cols-12">
           <div className="xl:col-span-5 lg:col-span-6 col-span-12">
@@ -188,7 +188,7 @@ const Info = () => {
                     you agree to our{" "}
                     <Link
                       href="#"
-                      className="text-primary hover:text-orange-600 duration-300"
+                      className="text-primary hover:text-primary-hover duration-300"
                     >
                       terms and conditions
                     </Link>{" "}

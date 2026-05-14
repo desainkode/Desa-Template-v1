@@ -6,13 +6,14 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: any) {
+  const { slug } = await params;
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/service`, {
       cache: "no-store",
     });
     const data = await res.json();
 
-    const service = data.ServicesData.find((item: any) => item.slug === params.slug);
+    const service = data.ServicesData.find((item: any) => item.slug === slug);
 
     if (!service) {
       return {

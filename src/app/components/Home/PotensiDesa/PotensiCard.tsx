@@ -6,7 +6,7 @@ type Doctype = {
     text: string
 }
 
-const SingleDoc = ({ icon, title, text }: Doctype) => {
+const PotensiCard = ({ icon, title, text }: Doctype) => {
     return (
         <div
             className="lg:col-span-4 sm:col-span-6 col-span-12"
@@ -30,4 +30,4 @@ const SingleDoc = ({ icon, title, text }: Doctype) => {
         </div>
     )
 }
-export default SingleDoc;
+export default PotensiCard;

@@ -1,4 +1,4 @@
-export type Blog = {
+export type Berita = {
   id?: number;
   title?: string;
   slug?: string;

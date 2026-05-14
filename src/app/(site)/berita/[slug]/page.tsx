@@ -9,8 +9,9 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: any) {
+  const { slug } = await params;
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-  const post = getPostBySlug(params.slug, [
+  const post = getPostBySlug(slug, [
     "title",
     "author",
     "content",
@@ -41,8 +42,8 @@ export async function generateMetadata({ params }: any) {
     return metadata;
   } else {
     return {
-      title: "Not Found",
-      description: "No blog article has been found",
+      title: "Tidak Ditemukan",
+      description: "Artikel berita tidak ditemukan",
       author: authorName,
       robots: {
         index: false,
@@ -61,8 +62,9 @@ export async function generateMetadata({ params }: any) {
 }
 
 export default async function Post({ params }: any) {
+  const { slug } = await params;
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-  const post = getPostBySlug(params.slug, [
+  const post = getPostBySlug(slug, [
     "title",
     "author",
     "authorImage",
@@ -96,9 +98,8 @@ export default async function Post({ params }: any) {
                 src={post.authorImage}
                 alt="image"
                 className="bg-no-repeat bg-contain inline-block rounded-full !w-20 !h-20"
-                width={40}
-                height={40}
-                layout="responsive"
+                width={80}
+                height={80}
                 quality={100}
               />
               <div className="">
@@ -212,7 +213,7 @@ export default async function Post({ params }: any) {
                       placeholder="Email address "
                       className="p-3 dark:bg-darkmode border border-border focus:border-primary dark:border-darkborder dark:focus:border-primary rounded-lg mb-2 w-full focus:outline-0"
                     />
-                    <button className="w-full py-4 px-9 text-lg font-medium bg-primary hover:bg-orange-600 duration-300 rounded-lg text-white">
+                    <button className="w-full py-4 px-9 text-lg font-medium bg-primary hover:bg-primary-hover duration-300 rounded-lg text-white">
                       Subscribe
                     </button>
                   </div>

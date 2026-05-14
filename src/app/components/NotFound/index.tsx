@@ -11,10 +11,10 @@ const NotFound = () => {
             <div className="relative mx-auto aspect-[129/138] max-w-80 text-center">
               <Image
                 src="/images/404.svg"
-                alt="image"
-                width={0}
-                height={0}
-                layout="responsive"
+                alt="404"
+                width={320}
+                height={340}
+                style={{ width: '100%', height: 'auto' }}
                 quality={100}
                 className="mx-auto max-w-full"
               />
@@ -54,17 +54,16 @@ const NotFound = () => {
                 </svg>
               </div>
               <h3 className="mb-5 text-2xl font-semibold text-black dark:text-white">
-                We Can&#39;t Seem to Find The Page You&#39;re Looking For.
+                Halaman Tidak Ditemukan
               </h3>
               <p className="mb-8 text-base text-body-color">
-                Oops! The page you are looking for does not exist. It might have
-                been moved or deleted.
+                Maaf! Halaman yang Anda cari tidak ada. Mungkin telah dipindahkan atau dihapus.
               </p>
               <Link
                 href="/"
                 className="rounded-lg px-7 py-3 text-base font-medium text-white transition bg-primary hover:bg-black duration-500"
               >
-                Go To Home
+                Kembali ke Beranda
               </Link>
             </div>
           </div>

@@ -45,7 +45,7 @@ const Services = () => {
             </h2>
             <Link
               href="/layanan"
-              className="py-1.125 px-2.188 bg-primary rounded-xl hover:bg-orange-600 duration-300 text-white font-medium shadow-lg shadow-primary/20"
+              className="py-1.125 px-2.188 bg-primary rounded-xl hover:bg-primary-hover duration-300 text-white font-medium shadow-lg shadow-primary/20"
             >
               Semua Layanan
             </Link>

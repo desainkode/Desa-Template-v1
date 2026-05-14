@@ -32,7 +32,7 @@ const Features = () => {
           <div className="lg:col-span-6 col-span-12 px-3">
             <motion.div {...rightAnimation}>
               <p className="dark:text-white/50 text-black/50 text-lg pb-8 mb-0">
-                Statistik
+                Statistik & Wilayah
               </p>
               <h3 className="md:text-6xl sm:text-40 text-3xl font-semibold text-dark dark:text-white pb-8">
                 Demografi & <br /> Statistik Desa
@@ -94,7 +94,7 @@ const Features = () => {
               <div className="mt-8">
                 <Link
                   href="/infografis"
-                  className="py-1.125 px-2.188 bg-primary rounded-lg hover:bg-orange-600 duration-300 text-white font-semibold block w-fit"
+                  className="py-1.125 px-2.188 bg-primary rounded-lg hover:bg-primary-hover duration-300 text-white font-semibold block w-fit"
                 >
                   Lihat Statistik Lengkap
                 </Link>

@@ -35,7 +35,7 @@ const SingleService = ({ service }: { service: ServiceType }) => {
                 </div>
                 <Link
                     href={`/services/${slug}`}
-                    className="flex gap-2 items-center font-medium justify-start mt-4 hover:text-orange-600 text-primary"
+                    className="flex gap-2 items-center font-medium justify-start mt-4 hover:text-primary-hover text-primary"
                 >
                     Read More{" "}
                     <Icon

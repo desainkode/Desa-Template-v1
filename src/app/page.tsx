@@ -3,8 +3,9 @@ import { Metadata } from "next";
 import Hero from "@/app/components/Home/Hero";
 import Services from "@/app/components/Home/Services";
 import Features from "@/app/components/Home/Features";
-import ProductDoc from "@/app/components/Home/ProductDoc";
-import Plan from "@/app/components/Home/Plans";
+import PotensiDesa from "@/app/components/Home/PotensiDesa";
+import APBDes from "@/app/components/Home/APBDes";
+import InformasiTerkini from "@/app/components/Home/InformasiTerkini";
 import FAQ from "@/app/components/Home/FAQ";
 import Info from "@/app/components/Home/Info";
 import Partners from "@/app/components/Home/Partner";
@@ -19,8 +20,9 @@ export default function Home() {
       <Hero />
       <Services />
       <Features />
-      <ProductDoc />
-      <Plan />
+      <PotensiDesa />
+      <APBDes />
+      <InformasiTerkini />
       <FAQ />
       <Info />
       <Partners />

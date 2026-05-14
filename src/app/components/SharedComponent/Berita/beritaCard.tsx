@@ -1,16 +1,16 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import { Blog } from "@/app/types/blog";
+import { Berita } from "@/app/types/berita";
 import { format } from "date-fns";
 import Link from "next/link";
 
-const BlogCard = ({ blog }: { blog: Blog }) => {
+const BeritaCard = ({ blog }: { blog: Berita }) => {
     const { title, coverImage, excerpt, date, slug } = blog;
     return (
         <>
             <div className="group mb-0 relative">
                 <div className="mb-8 overflow-hidden rounded">
-                    <Link href={`/blog/${slug}`} aria-label="blog cover" className="block">
+                    <Link href={`/berita/${slug}`} aria-label="blog cover" className="block">
                         <Image
                             src={coverImage!}
                             alt="image"
@@ -30,7 +30,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
                 <div>
                     <h3>
                         <Link
-                            href={`/blog/${slug}`}
+                            href={`/berita/${slug}`}
                             className="mb-4 inline-block font-semibold text-dark text-black hover:text-primary dark:text-white dark:hover:text-primary text-[22px] leading-tight"
                         >
                             {title}
@@ -45,4 +45,4 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
     );
 };
 
-export default BlogCard;
+export default BeritaCard;

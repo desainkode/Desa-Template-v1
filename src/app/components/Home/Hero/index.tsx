@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
               <p className="text-lg font-normal text-black/50 dark:text-white/50 sm:py-1.875 py-5 leading-relaxed">
                 Mewujudkan tata kelola desa yang transparan, akuntabel, dan melayani warga dengan sepenuh hati demi kemajuan bersama.
               </p>
-              <Link href="/profil" className="sm:px-2.188 px-6 sm:py-1.125 py-3 rounded-xl text-base hover:cursor-pointer font-medium bg-primary text-white hover:bg-orange-600 duration-500 inline-block shadow-lg shadow-primary/20 sm:mb-0 mb-4 transition-all active:scale-95">
+              <Link href="/profil" className="sm:px-2.188 px-6 sm:py-1.125 py-3 rounded-xl text-base hover:cursor-pointer font-medium bg-primary text-white hover:bg-primary-hover duration-500 inline-block shadow-lg shadow-primary/20 sm:mb-0 mb-4 transition-all active:scale-95">
                 Jelajahi Desa Kami
               </Link>
             </motion.div>

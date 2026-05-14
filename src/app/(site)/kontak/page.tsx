@@ -5,19 +5,19 @@ import Location from "@/app/components/Contact/OfficeLocation";
 import React from "react";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Contact | SassCandy",
+  title: "Kontak | Desa Pameutingan",
 };
 
 const page = () => {
   const breadcrumbLinks = [
-    { href: "/", text: "Home" },
-    { href: "/contact", text: "Contact" },
+    { href: "/", text: "Beranda" },
+    { href: "/kontak", text: "Kontak" },
   ];
   return (
     <>
       <HeroSub
-        title="Contact Us"
-        description="Discover a wealth of insightful materials meticulously crafted to provide you with a comprehensive understanding of the latest trends."
+        title="Hubungi Kami"
+        description="Kami siap melayani kebutuhan informasi dan layanan masyarakat Desa Pameutingan. Silakan hubungi kami melalui formulir atau kontak di bawah ini."
         breadcrumbLinks={breadcrumbLinks}
       />
       <ContactInfo />

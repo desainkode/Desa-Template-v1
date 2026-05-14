@@ -49,142 +49,131 @@ const Technologies = [
 
 const DocText = [
     {
-        icon: "tabler:brand-github",
-        title: "Github Sync",
-        text: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        icon: "lucide:sprout",
+        title: "Pertanian Unggul",
+        text: "Lahan produktif mendukung hasil tani, hortikultura, dan penguatan ketahanan pangan warga.",
     },
     {
-        icon: "tabler:crown",
-        title: "Branding",
-        text: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        icon: "lucide:store",
+        title: "UMKM & Produk Lokal",
+        text: "Kerajinan, olahan pangan, dan usaha rumahan tumbuh sebagai penggerak ekonomi desa.",
     },
     {
-        icon: "tabler:message-circle",
-        title: "Comments",
-        text: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        icon: "lucide:mountain",
+        title: "Alam & Wisata Local",
+        text: "Pesona alam dan udara sejuk pegunungan yang menjadi daya tarik utama Desa Pameutingan.",
     },
 ];
 
 const Portfolio = [
     {
-        image: "/images/productdoc/Portfolio-1.jpg",
+        image: "/images/potensi/potensi-1.jpg",
     },
     {
-        image: "/images/productdoc/Portfolio-2.jpg",
-    },
-    {
-        image: "/images/productdoc/Portfolio-3.jpg",
-    },
-    {
-        image: "/images/productdoc/Portfolio-4.jpg",
-    },
-    {
-        image: "/images/productdoc/Portfolio-5.jpg",
+        image: "/images/potensi/potensi-2.jpg",
     },
 ];
 
 const MonthlyPlans = [
     {
-        type: "Personal",
-        price: 19,
-        text: "For individuals looking for a simple CRM solution",
+        type: "Pendapatan Desa",
+        price: "3.542.873.000",
+        text: "Total pendapatan desa dari berbagai sumber (DDS, ADD, PBP, DLL).",
         benefits: [
-            "Basic CRM features",
-            "Unlimited Personal Pipelines",
-            "Email Power Tools",
+            "Dana Desa (DDS)",
+            "Alokasi Dana Desa (ADD)",
+            "Bagi Hasil Pajak (PBP)",
+            "Pendapatan Asli Desa (PADes)",
         ],
     },
     {
-        type: "Professional",
-        price: 49,
-        text: "For individuals looking for a simple CRM solution",
+        type: "Belanja Desa",
+        price: "3.124.500.000",
+        text: "Total realisasi belanja desa untuk pembangunan dan operasional.",
         benefits: [
-            "Basic CRM features",
-            "Unlimited Personal Pipelines",
-            "Email Power Tools",
-            "Unlimited Shared Pipelines",
+            "Penyelenggaraan Pemerintahan",
+            "Pelaksanaan Pembangunan",
+            "Pembinaan Kemasyarakatan",
+            "Pemberdayaan Masyarakat",
         ],
     },
     {
-        type: "Enterprise",
-        price: 99,
-        text: "For individuals looking for a simple CRM solution",
+        type: "Surplus / Sisa",
+        price: "418.373.000",
+        text: "Sisa Lebih Perhitungan Anggaran (SiLPA) tahun berjalan.",
         benefits: [
-            "Basic CRM features",
-            "Unlimited Personal Pipelines",
-            "Email Power Tools",
-            "Unlimited Shared Pipelines",
-            "Full API Access",
+            "Efisiensi Anggaran",
+            "Cadangan Pembangunan",
+            "Dana Darurat",
         ],
     },
 ];
 
 const yearlyPlans = [
     {
-        type: "Personal",
-        price: 149,
-        text: "For individuals looking for a simple CRM solution",
+        type: "Pendapatan Desa",
+        price: "3.421.150.000",
+        text: "Total pendapatan desa tahun 2025.",
         benefits: [
-            "Basic CRM features",
-            "Unlimited Personal Pipelines",
-            "Email Power Tools",
+            "Dana Desa (DDS)",
+            "Alokasi Dana Desa (ADD)",
+            "Bagi Hasil Pajak (PBP)",
+            "Pendapatan Asli Desa (PADes)",
         ],
     },
     {
-        type: "Professional",
-        price: 299,
-        text: "For individuals looking for a simple CRM solution",
+        type: "Belanja Desa",
+        price: "3.052.400.000",
+        text: "Total realisasi belanja desa tahun 2025.",
         benefits: [
-            "Basic CRM features",
-            "Unlimited Personal Pipelines",
-            "Email Power Tools",
-            "Unlimited Shared Pipelines",
+            "Penyelenggaraan Pemerintahan",
+            "Pelaksanaan Pembangunan",
+            "Pembinaan Kemasyarakatan",
+            "Pemberdayaan Masyarakat",
         ],
     },
     {
-        type: "Enterprise",
-        price: 599,
-        text: "For individuals looking for a simple CRM solution",
+        type: "Surplus / Sisa",
+        price: "368.750.000",
+        text: "SiLPA tahun 2025.",
         benefits: [
-            "Basic CRM features",
-            "Unlimited Personal Pipelines",
-            "Email Power Tools",
-            "Unlimited Shared Pipelines",
-            "Full API Access",
+            "Efisiensi Anggaran",
+            "Cadangan Pembangunan",
+            "Dana Darurat",
         ],
     },
 ];
 
 const Questions = [
     {
-        question: "Letraset sheets containing sum passages ?",
+        question: "Bagaimana cara mengurus KTP/KK di Desa Pameutingan?",
         answer:
-            "Seamlessly see the tasks that need your attention, check when your next meeting is coming up, and keep up with your progress.",
+            "Warga dapat datang langsung ke Kantor Desa dengan membawa surat pengantar dari RT/RW serta dokumen pendukung. Petugas pelayanan kami siap membantu proses administrasi Anda pada jam kerja.",
     },
     {
-        question: "There are many variations ?",
+        question: "Apa syarat untuk mendapatkan surat keterangan tidak mampu (SKTM)?",
         answer:
-            "Seamlessly see the tasks that need your attention, check when your next meeting is coming up, and keep up with your progress.",
+            "Syarat utamanya adalah membawa fotokopi KK, KTP, dan surat pernyataan penghasilan yang diketahui oleh Ketua RT dan RW setempat sebagai dasar verifikasi data kependudukan.",
     },
     {
-        question: "Lorem Ipsum generators on the Internet tend ?",
+        question: "Di mana lokasi kantor Desa Pameutingan?",
         answer:
-            "Seamlessly see the tasks that need your attention, check when your next meeting is coming up, and keep up with your progress.",
+            "Kantor Desa Pameutingan berlokasi di pusat administrasi desa yang strategis. Anda dapat melihat detail peta lokasi dan alamat lengkap pada bagian bawah halaman kontak kami.",
     },
     {
-        question: "Various versions have evolved over the ?",
+        question: "Bagaimana cara menyampaikan keluhan atau aspirasi warga?",
         answer:
-            "Seamlessly see the tasks that need your attention, check when your next meeting is coming up, and keep up with your progress.",
+            "Aspirasi dapat disampaikan melalui kotak saran di kantor desa, pesan WhatsApp resmi desa di halaman kontak, atau melalui forum musyawarah pembangunan desa (Musrenbangdes).",
     },
     {
-        question: "Finibus bonorum et malorum ?",
+        question: "Apakah data kependudukan di website ini selalu diperbarui?",
         answer:
-            "Seamlessly see the tasks that need your attention, check when your next meeting is coming up, and keep up with your progress.",
+            "Benar, kami berkomitmen untuk memperbarui data statistik kependudukan dan laporan anggaran secara berkala (per semester) guna menjaga transparansi informasi publik.",
     },
     {
-        question: "Many desktop publishing packages ?",
+        question: "Bagaimana cara mendaftarkan UMKM lokal untuk dipromosikan?",
         answer:
-            "Seamlessly see the tasks that need your attention, check when your next meeting is coming up, and keep up with your progress.",
+            "Pelaku usaha di Desa Pameutingan dapat menghubungi Kaur Ekonomi dan Pembangunan di Kantor Desa dengan membawa contoh produk atau profil usaha untuk didata ke dalam database potensi desa.",
     },
 ];
 
